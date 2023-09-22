@@ -40,6 +40,8 @@ export class AuthService {
   }
 
   async login(data: any){
+    return await this.http.post(this.baseUrl+'/auth/login',data).toPromise()
+
   }
 
   logout() {
